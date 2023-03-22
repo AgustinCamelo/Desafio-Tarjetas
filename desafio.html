@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="desafio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+    <main class="container">
+ 
+        <section class="top-container">
+
+            <div class="front">
+                <img id="front-card" src="interactive-card-form/imágenes/bg-card-front.png" alt="">
+                <img class="logo" src="interactive-card-form/imágenes/card-logo.svg" alt="logo">
+                <p class="front-number">0000 0000 0000 0000</p>
+                <div class="front-details">
+                    <p id="cardName">JANE APPLESEED</p>
+                    <p id="cardDate">
+                       <span id="mes">00</span>/<span id="año">00</span></p>
+                </div>
+            </div>
+          
+            <div class="back">
+                <img  id="card-back" src="interactive-card-form/imágenes/bg-card-back.png" alt="">
+                <p class="numcvc">000</p>
+            </div>
+        </section>
+   
+     <section class="bottom-container">
+        <form class="form">
+            <label for="input1" id="cardholder">CARDHOLDER NAME</label>
+            <input type="text" class="input1" placeholder="  e.g. Jane Appleseed">
+            <p class="errorMsj" id="errorName">Can't be blank</p><br>
+            <label for="input2" id="card-number">CARD NUMBER</label>
+            <input type="text" class="input2" placeholder="e.g. 1234 5678 9123 " maxlength="16">
+            <p class="errorMsj" id="errorNum">Can't be blank / Min-length: 16 </p><br>
+            <div class="form-data">
+                <div class="month"> <label for="MM">EXP. DATE</label>
+                    <input id="mm" placeholder="  MM" name="MM" maxlength="2">
+                    <p class="errorMsj" id="errorMonth">Can't be blank</p>
+                </div>
+                <div class="year" > <label for="YY" class="MMYY">(MM/YY)</label>
+                    <input id="yy" placeholder="  YY" name="YY" maxlength="2">
+                    <p class="errorMsj" id="errorYear">Can't be blank</p>
+                </div>
+                <div class="verification">
+                    <label for="cvc">CVC</label>
+                    <input id="cvc" type="text" placeholder="  e.g 123" name="cvc" maxlength="3">
+                    <p class="errorMsj" id="errorCvc">Can't be blank</p>
+                </div>
+            </div><br>
+            <input type="button" id="button" value="Confirm">
+           
+        </form>
+ <div class="thankYou">
+                <img id="logoComplete" src="interactive-card-form/imágenes/icon-complete.svg" alt=""><br><br>
+                <h1 id="title">THANK YOU!</h1><br>
+                <p id="paragraph">We've added your card details</p><br><br>
+                <button id="continueBtn" type="submit"> Continue</button>
+            </div>
+     </section>
+    </main>
+   <script src="desafio.js"></script>
+</body>
+
+</html>

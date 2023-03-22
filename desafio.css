@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.top-container{
+
+    background-image: url(interactive-card-form/imágenes/bg-main-mobile.png);
+   background-repeat: no-repeat; 
+   background-size: 100vw;
+   height: 30%;
+}
+.bottom-container{   
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-top: 2rem;
+}
+
+/* ------------Formulario--------------  */
+
+.form{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+   
+    padding-top: 6rem;
+    
+}
+.form-data{
+   display: flex;
+   gap: 0.5rem;
+}
+input{
+    padding-left: 0.5rem;
+    font-size: 16px;
+}
+input:focus {
+
+  outline: none;
+  border: 2px solid hsl(278, 68%, 11%);
+
+
+  }
+
+.input1{
+    width: 20rem;
+    border-radius: 4px;
+    height: 3rem;
+}
+.input2{
+    width:20rem;
+    border-radius: 4px;
+    height: 3rem;
+}
+.month{
+    display: flex;
+    flex-direction: column;
+}
+#mm{
+    width:4rem;
+    border-radius: 0.4rem;
+    height: 3rem;
+}
+#yy{
+    width: 4rem;
+    border-radius: 0.4rem;
+    height: 3rem;
+}
+#cvc{
+    width: 11rem;
+    border-radius: 0.4rem;
+    height: 3rem;
+}
+.year{
+    display: flex;
+    flex-direction: column; 
+}
+.verification{
+    display: flex;
+    flex-direction: column;
+}
+.errorMsj{
+    color: red;
+    font-size: 10px;
+    padding-top: 6px;
+    display: none;
+}
+#button{
+    height: 3.5rem;
+    width: 20.5rem;
+    border-radius: 0.4rem;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
+#button:hover{
+    opacity: 0.9;
+}
+label{
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 0.7rem;
+    color: hsl(278, 68%, 11%);
+}
+.thankYou{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    
+}
+#title{
+   letter-spacing: 0.5rem;
+   font-weight: bold;
+   color:hsl(278, 68%, 11%);
+}
+#paragraph{
+    font-size: 17px;
+}
+#continueBtn{
+    height: 3.5rem;
+    width: 18rem;
+    border-radius: 0.4rem;
+    background-color: #21092f;
+    color: white;
+}
+
+/*----------------Tarjetas----------------------*/
+
+#front-card{
+    height:10rem;
+    width: 17rem;
+    transform: translate(5%, 80%);
+    position: relative;
+    z-index: 1;
+}
+#card-back{
+   height: 10rem;
+   width: 17rem;
+   transform: translate(28%, -110%); 
+}
+.numcvc{
+    position: relative;
+    transform: translate(75%, -1560%); 
+    color: white;
+    font-size: 15px;
+}
+.logo{
+    position: absolute;  
+    z-index: 1;
+    transform: translate(-500%, 550%);
+    width: 3rem;
+}
+.front-number{
+    position: relative;
+    z-index: 1;
+    transform: translate(9%, 180%);
+    font-size: 20px;
+    color: white;
+}
+.front-details{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    transform: translate(15%, 430%);
+    font-size: 13px;
+    width: 14rem;
+    color: white
+}
+@media (min-width:480px){
+    .top-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(interactive-card-form/imágenes/bg-main-mobile.png);
+        
+        width: 100vw;
+    }
+    .bottom-container{   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    #front-card{
+        transform: translate(35%, 80%);
+    }
+    #card-back{
+       transform: translate(-35%, 10%); 
+    }
+    .numcvc{
+        transform: translate(40%, -430%); 
+    }
+    .logo{
+        transform: translate(-350%, 550%);
+    }
+    .front-number{
+        transform: translate(40%, 180%);
+    }
+    .front-details{
+        transform: translate(50%, 430%);
+    }
+}
+@media ( min-width:768px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .top-container{
+        background-image: url(interactive-card-form/imágenes/bg-main-desktop.png);
+        background-size: 100vh;
+        height: 100vh;
+        width: 35%;
+    }
+    .bottom-container{   
+          width: 100%;
+        }
+        .form{
+            padding-left: 8rem;
+            padding-bottom: 5rem;
+        }
+        #front-card{
+            height: 10rem;
+            width: 18rem;
+            transform: translate(80%, -40%);
+        }
+        #card-back{
+            height: 10rem;
+            width:18rem;
+            transform: translate(0%, 70%);
+        }
+        .numcvc{         
+            transform: translate(78%, 90%); 
+        }
+        .logo{
+            transform: translate(-90%, -180%);
+        }
+        .front-number{
+            transform: translate(85%, -600%);
+            font-size: 19px;
+        }
+        .front-details{
+            transform: translate(95%, -850%);
+            width: 16rem;
+            font-size: 11px;
+        }
+        .input1{
+            width: 16rem;
+            height: 2.3rem;        
+        }
+        .input2{
+            width: 16rem;
+            height: 2.3rem;        
+        }
+        #mm{
+            width: 3rem;
+            height: 2.3rem;        
+         }
+        #yy{
+            width: 3rem;
+            height: 2.3rem;        
+         }
+        #cvc{
+            width: 8.5rem;
+            height: 2.3rem;
+        }
+        #button{
+            height: 2.6rem;
+            width: 16rem;
+            border-radius: 0.4rem;
+            background-color: hsl(278, 68%, 11%);
+            color: white;
+        }
+        label{
+            font-size: 12px;
+        }
+        .thankYou{
+            padding-left: 10rem;
+            padding-top: 1rem;
+        }
+    }
+@media ( min-width:1024px){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .top-container{
+        background-image: url(interactive-card-form/imágenes/bg-main-desktop.png);
+        background-size: 100vh;
+        height: 100vh;
+        width: 30%;
+    }
+    .bottom-container{   
+          width: 70%;
+          padding-left: 0rem;
+        }
+        .form{
+            padding-left: 9rem;
+        }
+        #front-card{
+            height: 11.3rem;
+            width: 21rem;
+            transform: translate(85%, -40%);
+        }
+        #card-back{
+            height: 11.3rem;
+            width:21rem;
+            transform: translate(5%, 70%);
+        }
+        .numcvc{         
+            transform: translate(85%, 100%); 
+        }
+        .logo{
+            transform: translate(-70%, -200%);
+        }
+        .front-number{
+            transform: translate(90%, -550%);
+            font-size: 24px;
+        }
+        .front-details{
+            transform: translate(106%, -1000%);
+            width: 18rem;
+        }
+        .input1{
+            width: 19rem;
+            border-radius: 4px;
+            height: 2.5rem;       
+         }
+        .input2{
+            width: 19rem;
+            border-radius: 4px;
+            height: 2.5rem;        
+        }
+        #mm{
+            width: 3.5rem;
+            border-radius: 0.4rem;
+            height: 2.5rem;       
+         }
+        #yy{
+            width: 3.5rem;
+            border-radius: 0.4rem;
+            height: 2.5rem;       
+         }
+        #cvc{
+            width: 11rem;
+            border-radius: 0.4rem;
+            height: 2.5rem;
+        }
+        #button{
+            height: 3rem;
+            width: 19rem;
+            border-radius: 0.4rem;
+            background-color: hsl(278, 68%, 11%);
+            color: white;
+        }
+        label{
+            font-size: 13px;
+        }
+        .thankYou{
+            padding-left: 15rem;
+            padding-top: 1rem;
+        }
+    }
+@media (min-width: 1280px){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .top-container{
+        background-image: url(interactive-card-form/imágenes/bg-main-desktop.png);
+        background-size: 100vh;
+        height: 100vh;
+        width: 30%;
+    }
+    .bottom-container{   
+        width: 60%;
+        }
+        #front-card{
+            height: 13rem;
+            width: 24rem;
+            transform: translate(80%, -50%);
+        }
+        #card-back{
+            height: 13rem;
+            width:24rem;
+            transform: translate(0%, 60%);
+        }
+        .form{
+            padding-left: 15rem;
+            padding-top: 8rem;
+        }
+        .numcvc{         
+            transform: translate(80%, 30%); 
+        }
+        .logo{
+            transform: translate(-120%, -300%);
+        }
+        .front-number{
+            transform: translate(85%, -650%);
+            font-size: 26px;
+        }
+        .front-details{
+            transform: translate(98%, -1150%);
+            width: 21rem;
+            font-size: 13px;
+        }
+        .input1{
+            width: 22rem;
+            height: 3rem;
+         }
+        .input2{
+            width: 22rem;
+            height: 3rem;
+        }
+        #mm{
+            width: 4rem;
+            height: 3rem;
+         }
+        #yy{
+            width: 4rem;
+            height: 3rem;
+         }
+        #cvc{
+            width: 13rem;
+            height: 3rem;
+        }
+        #button{
+            height: 3.5rem;
+            width: 22rem;
+        }
+        label{
+            font-size: 15px;
+        }
+        .thankYou{
+            padding-left: 15rem;
+            padding-top: 1rem;
+        }
+    }
